@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "stripInternal": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmitOnError": false,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noImplicitReturns": true,
+    "outDir": "dist/",
+    "rootDir": "src/",
+    "sourceMap": true,
+    "inlineSources": true,
+    "target": "es5"
+  },
+  "exclude": [
+    "dist"
+  ],
+  "angularCompilerOptions": {
+    "strictMetadataEmit": true
+  }
+}

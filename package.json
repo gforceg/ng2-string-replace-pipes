@@ -1,0 +1,29 @@
+{
+  "name": "ng2-string-replace-pipes",
+  "version": "1.0.0",
+  "description": "a collection of handy string replacement pipes for angular 2.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gforceg/ng2-string-replace-pipes.git"
+  },
+  "keywords": [
+    "angular2",
+    "pipes"
+  ],
+  "author": "Greg Hedin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gforceg/ng2-string-replace-pipes/issues"
+  },
+  "homepage": "https://github.com/gforceg/ng2-string-replace-pipes#readme",
+  "dependencies": {
+    "@angular/core": "^2.0.0-rc.6",
+    "es6-shim": "^0.35.1",
+    "typescript": "^1.8.10",
+    "typescript-collections": "^1.1.2"
+  }
+}
