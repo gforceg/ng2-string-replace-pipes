@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { SRP_PIPES } from './pipes/pipes';
+
 @NgModule({
     imports: [],
     exports: [SRP_PIPES],

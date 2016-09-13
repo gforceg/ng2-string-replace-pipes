@@ -12,8 +12,8 @@ export class TitleCasePipe implements PipeTransform {
     // the output
     var stringOut = '';
     // fixme: this removes duplicate strings... which should probably be its own pipe!
-    var words = stringIn.split(/\s/);
-    words.forEach ((word) => { stringOut += word[0].toUpperCase() + word.substr(1) + ' '; });
+    var words: string[] = stringIn.split(String.fromCharCode(0x20));  // the space char
+    words.forEach ((word) => { stringOut += word.charAt(0).toUpperCase() + word.substr(1) + ' '; });
     return stringOut;
   }
 }
