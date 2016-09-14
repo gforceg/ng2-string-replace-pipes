@@ -1,6 +1,6 @@
 {
   "name": "ng2-string-replace-pipes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a collection of handy string replacement pipes for angular 2.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
