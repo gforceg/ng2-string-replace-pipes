@@ -30,26 +30,26 @@ because the transform method in the above pipe takes an array of RegExp as a par
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
-    @Component({
-      moduleId: module.id,
-      selector: 'app-emphasis',
-      template: `
+@Component({
+  moduleId: module.id,
+  selector: 'app-emphasis',
+  template: `
 <h1>Emphasis Works!</h1>
 <pre [innerHtml]="templateString | emphasis:emphasisWords"></pre>
       `
-    })
-    export class EmphasisComponent implements OnInit {
+})
+export class EmphasisComponent implements OnInit {
 
-      // used in my template
-      private emphasisWords: RegExp[] = [/for/, /and/, /or/];
+  // used in my template
+  private emphasisWords: RegExp[] = [/for/, /and/, /or/];
 
-      private templateString: string = `
+  private templateString: string = `
 for this and that do A.
 for all other situations, do B.
 don't forget, to do C if A and B both fail.
 instructions can be found at http://www.wikipedia.org/wiki/RTFM
 u.s.a p.r.c. u.s.a.a. a.a.r.p
 `;
-      ngOnInit() { }
-    }
+  ngOnInit() { }
+}
 ```
