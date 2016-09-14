@@ -10,7 +10,3 @@ import {EmphasisPipe} from './emphasis.pipe';
 import {StringReplaceTemplatePipe} from './string-replace.pipe';
 import {UrlPipe} from './url.pipe';
 
-
-// some shared functionality
-export const SRP_PIPES = [ProperCasePipe, TitleCasePipe, EmphasisPipe, StringReplaceTemplatePipe, UrlPipe ];
-
