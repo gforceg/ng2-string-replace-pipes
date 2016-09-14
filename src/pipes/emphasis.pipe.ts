@@ -12,11 +12,7 @@ export class EmphasisPipe implements PipeTransform {
     return '<strong>' + section + '</strong>';
   }
 
-  transform(stringIn: string, words: string[], flags: string = 'i'): string {
-    let regex_words: RegExp[] = [];
-    words.forEach(word => regex_words.push(new RegExp(word)));
-    let stringReplacePipe = new StringReplaceTemplatePipe();
-    let stringOut = stringIn;
-    return stringReplacePipe.transform(stringOut, regex_words, this.replace);
+  transform(str: string, words: RegExp[], flags: string = 'i'): string {
+    return new StringReplaceTemplatePipe().transform(str, words, this.replace);
   }
 }
