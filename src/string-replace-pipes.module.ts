@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-import { SRP_PIPES } from './pipes/pipes';
+import { EmphasisPipe, ProperCasePipe, TitleCasePipe, UrlPipe, StringReplaceTemplatePipe } from './pipes/pipes';
 
 @NgModule({
     imports: [],
-    exports: [SRP_PIPES],
-    declarations: [SRP_PIPES],
+    exports: [EmphasisPipe, ProperCasePipe, TitleCasePipe, UrlPipe, StringReplaceTemplatePipe],
+    declarations: [EmphasisPipe, ProperCasePipe, TitleCasePipe, UrlPipe, StringReplaceTemplatePipe],
    providers: [],
 })
 export class StringReplacePipesModule { }
