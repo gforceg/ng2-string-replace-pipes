@@ -3,3 +3,4 @@ dist
 .vscode
 
 ng2-string-replace-pipes/
+.tmp/
