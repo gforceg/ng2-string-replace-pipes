@@ -7,14 +7,16 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "noEmitOnError": false,
+    "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
     "noImplicitReturns": true,
-    "outDir": "dist/",
     "sourceMap": true,
-    "inlineSources": true,
     "target": "es5"
   },
   "exclude": [
-    "dist"
-  ]
+    "node_modules"
+  ],
+  "angularCompilerOptions": {
+    "strictMetadataEmit": true
+  }
 }

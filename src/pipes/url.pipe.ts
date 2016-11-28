@@ -2,7 +2,7 @@
 // automatically create hyperlinks where http:// and https:// is present in a string.
 
 import { Pipe, PipeTransform } from '@angular/core';
-import { StringReplaceTemplatePipe } from './pipes';
+import { StringReplaceTemplatePipe } from './index';
 
 @Pipe({ name: 'url' })
 export class UrlPipe implements PipeTransform {
