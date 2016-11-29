@@ -3,7 +3,7 @@
 // wraps StringReplaceTemplatePipe and passes in a replace method.
 
 import { Pipe, PipeTransform } from '@angular/core';
-import { StringReplaceTemplatePipe } from './index';
+import { StringReplaceTemplatePipe } from './string-replace.pipe';
 
 @Pipe({ name: 'emphasis' })
 export class EmphasisPipe implements PipeTransform {
