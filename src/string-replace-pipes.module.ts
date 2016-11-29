@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { EmphasisPipe, ProperCasePipe, TitleCasePipe, UrlPipe, StringReplaceTemplatePipe } from './index';
+import { StringReplaceTemplatePipe, EmphasisPipe, ProperCasePipe, TitleCasePipe, UrlPipe } from './index';
 
 @NgModule({
     imports: [],
