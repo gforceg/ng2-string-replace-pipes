@@ -4,3 +4,9 @@ dist
 
 ng2-string-replace-pipes/
 .tmp/
+bundles/
+ng2-string-replace-pipes.d.ts
+ng2-string-replace-pipes.js
+ng2-string-replace-pipes.js.map
+ng2-string-replace-pipes.metadata.json
+TODO.md

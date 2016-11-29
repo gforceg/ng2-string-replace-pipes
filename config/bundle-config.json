@@ -1,0 +1,15 @@
+{
+  "baseUrl": ".",
+  "transpiler": "typescript",
+  "map": {
+    "@angular": "./node_modules/@angular",
+    "typescript": "./node_modules/typescript/lib/typescript",
+    "typescript-collections": "./node_modules/typescript-collections/dist/lib/index.js"
+  },
+  "paths": {
+    "*": "*.js"
+  },
+  "meta": {
+    "./node_modules/@angular/*": {"build": false}
+  }
+}

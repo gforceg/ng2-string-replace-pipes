@@ -2,11 +2,10 @@ let gulp = require('gulp');
 let gutil = require('gulp-util');
 let join = require('path').join;
 let fs = require('fs');
-let config = require('../.config/tasks-config.js');
-let aotConfig = require('../tsconfig-aot.json');
+let config = require('../config/tasks-config.js');
 
 gulp.task('set build vars', () => {
-  let barrelFilename = 'index.ts'; // `${config.package.name}.ts`;
+  let barrelFilename = `${config.package_config.name}.ts`;
   let buffer = `export * from './${config.OUT_DIR}/index';
 `;
 
@@ -14,9 +13,9 @@ gulp.task('set build vars', () => {
 
 
   //  dynamically set the files array in tsconfig-aot.json to point at the new barrel
-  aotConfig.files = [barrelFilename];
-  aotConfig.angularCompilerOptions.genDir = config.FACTORY_DIR;
-  fs.writeFileSync('tsconfig-aot.json', JSON.stringify(aotConfig, null, '\t'));
+  config.aot_config.files = [barrelFilename];
+  config.aot_config.angularCompilerOptions.genDir = config.FACTORY_DIR;
+  fs.writeFileSync('tsconfig-aot.json', JSON.stringify(config.aot_config, null, '\t'));
 
   // update the .gitignore to ignore the OUT_DIR
   let gitignoreBuffer = String(fs.readFileSync('.gitignore')).split('\n');
@@ -29,5 +28,11 @@ gulp.task('set build vars', () => {
   if (!already_ignored) { gitignoreBuffer.push(`${config.OUT_DIR}/\n`); }
 
   gitignoreBuffer = gitignoreBuffer.join('\n');
-  return fs.writeFileSync('.gitignore', gitignoreBuffer);
+  fs.writeFileSync('.gitignore', gitignoreBuffer);
+
+  // update the "main" and "typings" dictionaries in package.json
+  config.package_config.main = join(`${config.BUNDLE_DIR}`, `${config.package_config.name}.umd.js`);
+  config.package_config.typings = join(`${config.package_config.name}.d.ts`);
+  fs.writeFileSync('package.json', JSON.stringify(config.package_config, null, '\t'));
+  return;
 });
