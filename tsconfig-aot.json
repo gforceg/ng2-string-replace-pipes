@@ -11,6 +11,10 @@
 		"suppressImplicitAnyIndexErrors": true,
 		"noImplicitReturns": true,
 		"sourceMap": true,
+		"lib": [
+			"es2015",
+			"dom"
+		],
 		"target": "es5"
 	},
 	"exclude": [

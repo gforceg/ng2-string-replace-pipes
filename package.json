@@ -1,6 +1,6 @@
 {
 	"name": "ng2-string-replace-pipes",
-	"version": "1.0.12",
+	"version": "1.0.13",
 	"description": "a collection of handy string replacement pipes for angular 2.",
 	"main": "bundles/ng2-string-replace-pipes.umd.js",
 	"typings": "ng2-string-replace-pipes.d.ts",
@@ -28,7 +28,6 @@
 		"@angular/compiler": "^2.1.2",
 		"@angular/compiler-cli": "^2.1.2",
 		"@angular/core": "^2.1.2",
-		"@types/core-js": "^0.9.34",
 		"@types/node": "^6.0.46",
 		"codelyzer": "^1.0.0-beta.0",
 		"del": "^2.2.2",
