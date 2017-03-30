@@ -5,7 +5,7 @@ require('require-dir')('./gulp-tasks');
 
 //fixme: auto gitignore configs.BUNDLE_DIR
 
-gulp.task('boosh', (done) => {
+gulp.task('build', (done) => {
   runSequence(
     'to-do',
     'set build vars',
@@ -33,7 +33,7 @@ gulp.task('default', (done) => {
     done
   );
 
-  gulp.task('watch', (done) => {
+  gulp.task('watch', ['default'], (done) => {
 
   });
 });
