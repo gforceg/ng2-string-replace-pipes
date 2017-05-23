@@ -1,7 +1,7 @@
 {
-	"name": "ng2-string-replace-pipes",
-	"version": "1.0.14",
-	"description": "a collection of handy string replacement pipes for angular 2.",
+	"name": "ngx-string-replace-pipes",
+	"version": "1.0.15",
+	"description": "a collection of handy string replacement pipes for angular >= 2.",
 	"main": "bundles/ng2-string-replace-pipes.umd.js",
 	"typings": "index.d.ts",
 	"scripts": {
