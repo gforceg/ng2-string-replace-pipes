@@ -8,10 +8,15 @@ let ts = require('gulp-typescript');
 let sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('sourcemaps', ['tsc out folder'], () => {
-  return gulp.src(join(config.OUT_DIR, '**/*.js'))
+  gulp.src(join(config.OUT_DIR, '**/*.js'))
   .pipe(sourcemaps.init())
   .pipe(sourcemaps.write('./'))
   .pipe(gulp.dest(config.OUT_DIR));
+
+  return gulp.src(config.barrel_file_name + '.js')
+  .pipe(sourcemaps.init())
+  .pipe(sourcemaps.write('./'))
+  .pipe(gulp.dest(process.cwd()));
 })
 
 gulp.task('tsc out folder', () => {
@@ -24,8 +29,7 @@ gulp.task('tsc out folder', () => {
 
 gulp.task('tsc root barrel', () => {
 
-  return gulp.src(join(process.cwd(), `${config.package_config.name}.ts`))
-  // .pipe(inline({ useRelativePaths: true }))
+  return gulp.src(join(process.cwd(), `${config.barrel_file_name}.ts`))
   .pipe(ts(config.tsc_config.compilerOptions))
   .pipe(gulp.dest(process.cwd()));
 });

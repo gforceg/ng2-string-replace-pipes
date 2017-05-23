@@ -21,7 +21,7 @@
 		"node_modules"
 	],
 	"files": [
-		"ng2-string-replace-pipes.ts"
+		"index.ts"
 	],
 	"angularCompilerOptions": {
 		"genDir": "ngfactory"

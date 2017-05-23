@@ -4,3 +4,12 @@ src/
 *.ts
 !*.d.ts
 TODO.md
+.tmp/
+config/
+gulp-tasks/
+bundlefile.js
+gulpfile.js
+.npmignore
+.gitignore
+tsconfig-aot.json
+tsconfig.json
